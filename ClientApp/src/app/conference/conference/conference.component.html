@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+
+    <div class="col d-flex justify-content-center">
+        <video #localVideo autoplay controls></video>
+    </div>
+
+</div>
+
+<div class="row d-flex flex-row justify-content-center mt-1">
+    <div class="d-flex mx-1" *ngFor="let p of participants">
+        <app-remote-video [name]="p.userName" [stream]="p.stream"></app-remote-video>
+    </div>
+</div>
+</div>

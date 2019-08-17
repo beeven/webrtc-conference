@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="row">
+        <h2>
+            Conferences:
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <ul class="list-group">
+                <li class="list-group-item " *ngFor="let conference of conferences">
+                    <a class="d-flex justify-content-between align-items-center"
+                        [routerLink]="['/conference', conference.conferenceId]">
+                        <span>{{conference.name}}</span>
+                        <span class="badge badge-primary badge-pill">{{conference.participantCount}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
